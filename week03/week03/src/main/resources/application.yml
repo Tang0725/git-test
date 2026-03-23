@@ -1,0 +1,27 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /api  # 上下文路径
+#
+#spring:
+#  application:
+#    name: week03
+#
+#app:
+#  app-name: 企业后台管理系统
+#  version: 1.0.0
+#  description: 基于 Spring Boot 3.5.11 构建
+#  published: false
+#  author:
+#    name: tqx
+#    website: https://tqx.top
+#    email: 3501822088@qq.com
+#  features:
+#    - 基于 Spring Boot 3.5.11 构建
+#    - 集成 Spring Security
+#    - 集成 Spring Data JPA
+#    - 集成 Spring Data Redis
+
+spring:
+  profiles:
+    active: dev

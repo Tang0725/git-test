@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api  # 上下文路径
+
+spring:
+  application:
+    name: week03 开发环境
+
+app:
+  app-name: 企业后台管理系统
+  version: 1.0.0
+  description: 基于 Spring Boot 3.5.11 构建
+  published: false
+  author:
+    name: tqx
+    website: https://tqx.top
+    email: 3501822088@qq.com
+  features:
+    - 基于 Spring Boot 3.5.11 构建
+    - 集成 Spring Security
+    - 集成 Spring Data JPA
+    - 集成 Spring Data Redis
+
+aliyun:
+  sms:
+    # 是否启用短信服务
+    enabled: true
+    # 服务端点配置
+    endpoint: dypnsapi.aliyuncs.com
+    region-id: cn-hangzhou
+    # 敏感信息：建议用环境变量覆盖，不写死在配置中
+#    access-key-id: ${ALIYUN_ACCESS_KEY_ID}
+#    access-key-secret: ${ALIYUN_ACCESS_KEY_SECRET}
+    # 赠送签名（见 1.3 赠送签名配置）
+    sign-name: "速通互联验证码"
+    # 赠送模板 CODE（见 1.4 赠送模板配置）
+    template-code: "100001"
+    # 方案名称，可选，不填为默认方案
+    scheme-name:

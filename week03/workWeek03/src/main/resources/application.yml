@@ -1,0 +1,16 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /api
+#
+#spring:
+#  application:
+#    name: workWeek03
+#app:
+#  name: "spring-boot-demo"
+#  version: "1.0.0"
+#  description: "Spring Boot Demo"
+
+spring:
+  profiles:
+    active: dev
