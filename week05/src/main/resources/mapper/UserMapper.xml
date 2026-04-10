@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace=接口全类名 -->
+<mapper namespace="top.tqx.week05.mapper.UserMapper">
+    <!-- id=接口方法名，resultType=返回实体类 -->
+    <select id="selectByCondition" resultType="top.tqx.week05.entity.User">
+        SELECT * FROM t_user
+        <where>
+            <!-- 条件1：用户名不为空时，模糊查询 -->
+            <if test="username != null and username != ''">
+                AND username LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <!-- 条件2：年龄不为空时，大于等于该年龄 -->
+            <if test="minAge != null">
+                AND age >= #{minAge}
+            </if>
+        </where>
+    </select>
+</mapper>

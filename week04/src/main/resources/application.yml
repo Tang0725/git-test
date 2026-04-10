@@ -1,0 +1,16 @@
+server:
+  port: 8080
+team:
+  leader: tqx
+  age: 35
+  email: 3501822088@qq.com
+  phone: 18451915164
+  createTime: 2026-03-27
+
+spring:
+  application:
+    name: springboot-week04
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
